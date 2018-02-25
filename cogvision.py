@@ -19,6 +19,8 @@ params   = {'visualFeatures': 'Categories, Description, Color'} #changeable
 def cogv_get_info(image_url):
     data     = {'url': image_url}
     response = requests.post(vision_analyze_url, headers=headers, params=params, json=data)
+    print ("RESPONSE: ")
+    print (response.json())
     response.raise_for_status()
     analysis = response.json()
     image_caption = analysis["description"]["captions"][0]["text"].capitalize()

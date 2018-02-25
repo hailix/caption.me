@@ -1,7 +1,7 @@
 #from sqlite3 import dbapi2 as sqlite3
 
 from flask import Flask 
-from flask import render_template, g
+from flask import render_template, g, request
 
 import os, urllib, cv2
 import numpy as np
@@ -20,13 +20,14 @@ if __name__ == "__main__":
   
     ### ROUTES ###    
 @app.route('/')
-@app.route('/<image_url>')
-def hello_world(image_url=''):
-    
-    db = get_db()
-    #image_url = 'https://pbs.twimg.com/media/CrvL27ZWEAE3BYs.jpg'
-    #'https://cdn.images.express.co.uk/img/dynamic/109/590x/hog-694202.jpg';
-    
+@app.route('/', methods=['POST'])
+def hello_world( image_url='https://raw.githubusercontent.com/hailix/caption.me/master/static/athena_owl.png'):
+
+    if request.method == 'POST':
+        print ("POSTING")
+        image_url = request.form['image_url']
+        print (image_url)
+    #return json.dumps(request.json)
     cog_caption, tags = cogv_get_info(image_url)
     db_caption = tag_query_db(tags)
     
