@@ -1,0 +1,46 @@
+.clearfloat {
+    clear:both;
+}
+
+body {
+    margin: 0 auto;
+    color: white;
+    align-items: center;
+}
+
+@font-face {
+    font-family:'pooplatter';
+    src: url('fonts/pooplatter.ttf');
+}
+
+@font-face {
+    font-family:'TypoQuik';
+    src: url('fonts/TypoQuik.otf');
+}
+
+h1 {
+    font-family: 'pooplatter', sans-serif;
+    letter-spacing: 5px;
+    color: #EB8258;
+    font-size: 5em;
+    margin-top: 20px;
+    
+}
+
+h2 {
+    font-family: 'TypoQuik', sans-serif;
+    color: #000;
+    letter-spacing: 3px;
+}
+
+p {
+   font-family: 'TypoQuik', sans-serif;
+    color: #000;
+    letter-spacing: 3px;
+    font-size: 2em;
+}
+
+li {
+    font-family: 'TypoQuik', sans-serif;
+    letter-spacing: 3px;
+}

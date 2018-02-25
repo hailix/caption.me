@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html>
+    
+    
+    <head>
+     <title>captionme I elevate insta</title>
+        
+    <link rel="stylesheet" href="main.css">
+        
+    <link href="open-iconic/css/open-iconic.css" rel="stylesheet">
+
+        <style>
+        
+            #main {
+                width: 1500px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            
+            button {
+                line-height: 30px;
+                font-family: 'TypoQuik', sans-serif;
+                letter-spacing: 2px;
+                font-weight: bold;
+            }
+            
+            #nav1 {
+                position: absolute;
+                margin: 0px auto;
+                float: right;
+                margin-bottom: 70px;
+            }
+            
+            #nav2 {
+                position: absolute;
+            }
+            
+            #instaexample {
+                float: left;
+                border: 5px solid #FCEFE4;
+                margin-bottom: 80px;
+            }
+            
+            #bigpink {
+            background-color: #E8AFA6;
+            align-content: center;
+            text-align: center;
+            width: 1500px; 
+            }
+            
+            #pinkrectangle {
+            background-color: #E8AFA6;
+            float: left;
+            width: 750px;
+            margin-bottom: 50px;
+            }
+            
+            #tanrectangle {
+            background-color: #FCEFE4;
+            float: right;
+            width: 750px;
+            margin-bottom: 50px;
+            }
+            
+            h2 span {
+                position: absolute;
+            }
+            
+            #insta {
+                position: absolute;
+                left: 0px;
+            }
+            
+            }
+            
+            ul {
+                position: absolute;
+                margin: 0px;
+                padding 0px;
+                list-style: none;
+            }
+        
+            ul li {
+                float:left;
+                width: 300px;
+                height: 40px;
+                background-color: #FCEFE4;
+                opacity: .8;
+                line-height: 40px;
+                text-align: center;
+                font-size: 20px;
+                margin-right: 2px;
+            }
+            
+            ul li a {
+                text-decoration: none;
+                color: #000;
+                display: block;
+            }
+            
+            ul li a:hover {
+                background-color: #F4D35E;
+            }
+            
+            ul li ul li {
+                display: none;
+            }
+            
+            ul li:hover ul li {
+                display: block;
+            }
+            
+            /*taken from https://www.designcouch.com/home/why/2013/11/01/responsive-css3-lightbox-with-no-javascript/*/
+            
+            /* Styles the thumbnail */
+
+            a.lightbox img {
+                position: absolute;
+                width: 1000px;
+                /*border: 3px solid white;*/
+                /*box-shadow: 0px 0px 8px rgba(0,0,0,.3);*/
+                margin: 94px 20px 20px 20px;
+                float: left;
+            }
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+            .lightbox-target {
+                position: absolute;
+                top: -100%;
+                width: 100%;
+                background: rgba(0,0,0,.7);
+                width: 100%;
+                opacity: 0;
+                -webkit-transition: opacity .5s ease-in-out;
+                -moz-transition: opacity .5s ease-in-out;
+                -o-transition: opacity .5s ease-in-out;
+                transition: opacity .5s ease-in-out;
+                overflow: hidden;
+            }
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+            .lightbox-target img {
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left:0;
+                right:0;
+                bottom: 0;
+                max-height: 0%;
+                max-width: 0%;
+                border: 3px solid white;
+                box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+                box-sizing: border-box;
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+            }
+
+/* Styles the close link, adds the slide down transition */
+
+            a.lightbox-close {
+                display: block;
+                width:50px;
+                height:50px;
+                box-sizing: border-box;
+                background: white;
+                color: black;
+                text-decoration: none;
+                position: absolute;
+                top: -80px;
+                right: 0;
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+            }
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+            a.lightbox-close:before {
+                content: "";
+                display: block;
+                height: 30px;
+                 width: 1px;
+                background: black;
+                position: absolute;
+                left: 26px;
+                top:10px;
+                -webkit-transform:rotate(45deg);
+                -moz-transform:rotate(45deg);
+                -o-transform:rotate(45deg);
+                transform:rotate(45deg);
+            }
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+            a.lightbox-close:after {
+                content: "";
+                display: block;
+                height: 30px;
+                width: 1px;
+                background: black;
+                position: absolute;
+                left: 26px;
+                top:10px;
+                -webkit-transform:rotate(-45deg);
+                -moz-transform:rotate(-45deg);
+                -o-transform:rotate(-45deg);
+                transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+            .lightbox-target:target {
+                opacity: 1;
+                top: 0;
+                bottom: 0;
+            }
+
+            .lightbox-target:target img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+
+            .lightbox-target:target a.lightbox-close {
+                top: 0px;
+            }
+            
+             
+		.thumbnail {
+			background-color: #CCC;
+			margin: 10px;
+			width: 220px;
+			height: 220px;
+			float: left;
+			overflow: hidden;
+            position: relative;
+            margin-bottom: 50px;
+		}
+        
+        .overlay {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            
+            background-color: rgba(0,0,0,0.6);
+            color: #FFF;
+            
+            text-align: center;
+            padding-top: 100px;
+            
+            display:none;
+            
+            margin-right: 2px;
+            margin-left: 2px;
+        
+            font-family: 'TypoQuik', sans-serif;
+                
+            }
+        
+        
+        .thumbnail:hover > .overlay {
+            display: block;
+        }
+
+		.thumbnail > img {
+			width: 100%;
+			height: auto;
+		}
+        
+        .thumbnail .oi {
+            font-size: 0.8em;
+        }
+            
+         .comment-icon {
+            margin-left 15px;
+        }
+        
+        </style>   
+        
+    </head>
+    
+    <body>
+        
+    <div id="main">
+    
+    <!--<h1>captionme</h1>-->
+        
+        <div id="logo">
+            <img src="IMG/logo.png" alt="captionme" width="500px">
+        </div> <!-- #logo -->
+        
+        <button>Generate your Caption 
+            <a href="/gen"></a>
+        </button>
+    
+        <h2>the perfect photo needs a perfect caption</h2>
+        
+        <br><br>
+        
+        <div id="instaexample">
+            <img src="IMG/instaexample.png" alt="instaexample" width="800px">
+        </div> <!-- #instaexample -->
+        
+        <div id="heart">
+            <img src="IMG/heart.png" alt="heart" width="400">
+        </div><!-- #heart-->
+    
+        <div id="caption">
+            <img src="IMG/caption.png" alt="caption">
+        </div><!-- #caption -->
+        
+        <div class="clearfloat"></div>
+        
+          
+                <div id="thumbnails">
+
+			<div class="thumbnail">
+				<img src="IMG/cats.png" alt="Cats">
+				<div class="overlay">
+                   
+                       <span class="oi"></span>When you show up to work in the same outfit as your coworker
+                    
+                    <br>
+                    <span class="oi" data-glyph="heart"></span>
+					5,048
+                    <span class="oi comment-icon" data-glyph="comment-square"></span>
+					107
+				</div>
+			</div> <!-- .thumbnail -->
+
+			<div class="thumbnail">
+				 <img src="IMG/pizza.png" alt="pizza"> 
+				<div class="overlay">
+                        <span class="oi"></span>Don't you want a (pizza) me
+                    <br>
+                    <span class="oi" data-glyph="heart"></span>
+					1,918
+                    <span class="oi comment-icon" data-glyph="comment-square"></span>
+					17
+				</div>  
+                
+			</div> <!-- .thumbnail -->
+
+			<div class="thumbnail">
+				 <img src="IMG/urth.png" alt="Urth"> 
+				<div class="overlay">
+                          <span class="oi"></span>EGGstremely grateful
+                     <br>
+                    
+                    <span class="oi" data-glyph="heart"></span>
+					2,661
+                    <span class="oi comment-icon" data-glyph="comment-square"></span>
+					17
+				</div>
+			</div> <!-- .thumbnail -->
+                    
+            <div class="thumbnail">
+				 <img src="IMG/Sara.png" alt="Sara"> 
+				<div class="overlay">
+                          <span class="oi"></span>Vitamin Sea
+                     <br>
+                    
+                    <span class="oi" data-glyph="heart"></span>
+					164
+                    <span class="oi comment-icon" data-glyph="comment-square"></span>
+					5
+				</div>
+			</div> <!-- .thumbnail -->
+                    
+                 <div class="thumbnail">
+				 <img src="IMG/best.png"> 
+				<div class="overlay">
+                          <span class="oi"></span>Livin' my best life
+                     <br>
+                    
+                    <span class="oi" data-glyph="heart"></span>
+					387
+                    <span class="oi comment-icon" data-glyph="comment-square"></span>
+					30
+				</div>
+			</div> <!-- .thumbnail -->
+                    
+                    <div class="thumbnail">
+				 <img src="IMG/game.png" alt="Game"> 
+				<div class="overlay">
+                          <span class="oi"></span>Me and My GameBaes
+                     <br>
+                    
+                    <span class="oi" data-glyph="heart"></span>
+					276
+                    <span class="oi comment-icon" data-glyph="comment-square"></span>
+					10
+				</div>
+			</div> <!-- .thumbnail -->
+                    
+                    <div class="clearfloat"></div>
+        
+    <div id="pinkrectangle">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p><span>elevate your <br> <img src="IMG/instalogo.png" width="117px"> <br> game</span></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div><!-- #pinkrectangle -->
+        
+        
+    <div id="tanrectangle">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+          <p><span>find those <br> <img src="IMG/fire.png" width="100px"> <br> captions below</span></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div><!--tanrectangle-->
+                    
+        <div class="clearfloat"></div>
+        
+    <div id="bigpink">
+        
+              <div id="nav1">
+                <ul>
+                    <li><a>type</a>
+                        <ul>
+                            <li><a>Cliches</a></li>
+                            <li><a>Puns</a></li>
+                            <li><a>Quotes</a></li>
+                            <li><a>Lyrics</a></li>
+                            <li><a>Basic</a></li>
+                            <li><a>Surprise Me!</a></li>
+                        </ul>
+                    </li><!-- Type -->
+                        
+                </ul>
+        
+            </div><!-- #nav1 -->
+        
+        <div id="clearfloat"></div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <div id="nav2">
+                  <ul>
+                    <li><a>tone</a>
+                        <ul>
+                            <li><a>Happy</a></li>
+                            <li><a>Sad</a></li>
+                            <li><a>Romantic</a></li>
+                            <li><a>Angry</a></li>
+                            <li><a>Chill</a></li>
+                            <li><a>Thankful</a></li>
+                            <li><a>Optimistic</a></li>
+                            <li><a>Tired</a></li>
+                            <li><a>Proud</a></li>
+                            <li><a>Encouraging</a></li>
+                            <li><a>Bold</a></li>
+                            <li><a>Supportive</a></li>
+                        </ul>
+                    </li><!-- Type -->
+                        
+                </ul>
+            
+              <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            
+            <a class="lightbox" href="#insta">
+              <img src="IMG/insta.png">      
+        </a>
+        <div class="lightbox-target" id="insta">
+             <img src="IMG/lightbox.png">
+             <a class="lightbox-close" href="#"></a>
+        </div><!-- .lightbox-target -->
+              
+                        
+            <div> <!-- #nav2 -->
+    </div><!-- #bigpink -->
+        
+    
+              
+              
+        <!--<div id="insta">
+            <img src="IMG/insta.png" width="1500px" height="auto">
+        </div><!-- #insta -->
+             
+        
+    </div><!-- #main -->
+        
+    </body>
+    
+</html>
+
