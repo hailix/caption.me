@@ -18,10 +18,15 @@ if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=8080)
 
   
-    ### ROUTES ###    
-@app.route('/')
-@app.route('/', methods=['POST'])
-def hello_world( image_url='https://raw.githubusercontent.com/hailix/caption.me/master/static/athena_owl.png'):
+    ### ROUTES ###
+@app.route('/')    
+def home {     
+    return render_template('index.html', title='Home')      
+}
+    
+@app.route('/gen')
+@app.route('/gen', methods=['POST'])
+def gen_caption( image_url='https://raw.githubusercontent.com/hailix/caption.me/master/static/athena_owl.png'):
 
     if request.method == 'POST':
         print ("POSTING")
