@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: slategray;
+    background:  #333333;
+}
+
+h1 {
+    color: skyblue;
+}
+b {
+    color: white;
+}
+
+.button {
+    font-family: monospace;    
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 5px;
+    background: white;
+    color: pink;
+    text-align: center;
+    text-decoration: bold;
+    display: inline-block;
+    margin: 4px 2px;
+    opacity: 1;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;    
+
+}
+
+.input-box {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

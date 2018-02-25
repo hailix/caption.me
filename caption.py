@@ -38,7 +38,7 @@ def hello_world( image_url='https://raw.githubusercontent.com/hailix/caption.me/
     for t in tags:
         tag_string+="#"+t+" "
     
-    return render_template('index.html', title='Home', caption=cog_caption, image_url=image_url, query=db_caption, tags=tag_string)    
+    return render_template('cap_generator.html', title='Home', caption=cog_caption, image_url=image_url, query=db_caption, tags=tag_string)    
     
 @app.route('/test')
 def test_page_output():
